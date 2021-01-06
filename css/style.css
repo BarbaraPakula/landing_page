@@ -3,22 +3,55 @@ body {
   font-family: "Montserrat";
   font-size: 14px;
   font-weight: 400;
-  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0;
+  text-align: center;
 }
 
+/* header */
 header {
+  padding: 45px 60px 20px 60px;
   height: 729px;
-  background-image: url(images/Background_Image.png);
+  background-image: url("images/background_image.png");
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
   color: #ffffff;
 }
 
+/* headings */
 h1 {
   font-size: 75px;
   text-transform: uppercase;
+}
+
+h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+h3 {
+  color: #222222;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: normal;
+  letter-spacing: -0.45px;
+  margin: 5px;
+}
+
+h4 {
+  font-size: 16px;
+  font-family: "droid-serif";
+  color: #777777;
+}
+
+h5 {
+  font-size: 14px;
+  font-family: "droid-serif";
+  color: #737373;
+  margin: 5px;
 }
 
 h6 {
@@ -32,7 +65,12 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
-      justify-content: space-between;
+  justify-content: space-between;
+}
+
+.nav a:hover {
+  background: #ddd;
+  color: black;
 }
 
 ul {
@@ -43,6 +81,7 @@ ul {
 
 li {
   display: inline-block;
+  margin: 30px;
 }
 
 a {
@@ -50,31 +89,14 @@ a {
   color: #ffffff;
 }
 
-/* section */
-h2 {
-  font-size: 40px;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-}
-
-h3 {
-  color: #222222;
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: normal;
-  letter-spacing: -0.45px;
-}
-
-h4 {
-  font-size: 16px;
-  font-family: "droid-serif";
-  color: #777777;
-}
-
-h5 {
-  font-size: 14px;
-  font-family: "droid-serif";
-  color: #737373;
+/* services & portfolio*/
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 #services {
@@ -82,25 +104,17 @@ h5 {
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
+  margin-top: 30px;
 }
 
 #portfolio {
   background-color: #f7f7f7;
   text-align: center;
-  height: 1218px;
-}
-
-.row {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: center;
-      justify-content: center;
+  margin-top: 30px;
 }
 
 #services .card {
-  margin: 0;
+  margin: 10px;
   padding: 0;
   width: 274px;
   height: 184px;
@@ -110,6 +124,8 @@ h5 {
   width: 291px;
   min-height: 393px;
   font-size: 50px;
+  background-color: #fff;
+  margin: 15px;
 }
 
 .card p {
@@ -122,35 +138,22 @@ h5 {
 .fa-stack {
   color: #fed136;
   font-size: 35px;
-  padding: 3px;
 }
 
+/* Footer */
 footer {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: 40px;
-  margin: 0;
+  margin: 20px 0 20px -400px;
   padding: 0;
-  position: relative;
 }
 
-.social i {
-  width: 41px;
-  height: 40px;
-}
-
-.fab {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  font-size: 16px;
-  background-color: #222222;
-  color: #ffffff;
-}
-
-.social i {
-  width: 41px;
-  height: 40px;
+.social {
+  margin-left: 40px;
+  letter-spacing: 8px;
 }
 
 .fab {
@@ -160,6 +163,10 @@ footer {
   font-size: 16px;
   background-color: #222222;
   color: #ffffff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .btn {
@@ -169,23 +176,47 @@ footer {
   height: 65px;
   font-size: 18px;
   font-weight: 700;
-  border-radius: 5px;
   letter-spacing: -1.88px;
   display: inline-block;
-}
-
-footer,
-nav,
-.card,
-section,
-img,
-div {
-  border: 1px solid;
+  border-radius: 5%;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
 }
 
 /* Media */
-/* @media (max-width: 767px) {
-    .row {
-      flex-direction: column;
-    align-items: center; } */
+@media (max-width: 767px) {
+  footer {
+    display: inline;
+    text-align: center;
+    margin: 0;
+  }
+
+  .social {
+    margin: 0;
+  }
+
+  header {
+    height: auto;
+    padding-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h6 {
+    font-size: 2em;
+  }
+
+  nav {
+    display: inline;
+  }
+
+  li {
+    display: block;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
