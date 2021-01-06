@@ -7,25 +7,24 @@ body {
   padding: 0;
 }
 
-/* header */
 header {
   height: 729px;
-  background-image: url("/images/Background_Image.png");
+  background-image: url(/images/Background_Image.png);
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
   color: #ffffff;
 }
 
+h1 {
+  font-size: 75px;
+  text-transform: uppercase;
+}
+
 h6 {
   font-family: "droid-serif";
   font-size: 36px;
   letter-spacing: -1px;
-}
-
-h1 {
-  font-size: 75px;
-  text-transform: uppercase;
 }
 
 /* nav */
@@ -52,13 +51,6 @@ a {
 }
 
 /* section */
-#services {
-  text-align: center;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-}
-
 h2 {
   font-size: 40px;
   text-transform: uppercase;
@@ -85,6 +77,13 @@ h5 {
   color: #737373;
 }
 
+#services {
+  text-align: center;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
 #portfolio {
   background-color: #f7f7f7;
   text-align: center;
@@ -94,6 +93,8 @@ h5 {
 .row {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: center;
       justify-content: center;
 }
@@ -105,7 +106,7 @@ h5 {
   height: 184px;
 }
 
-#portfolio .row .card {
+#portfolio .card {
   width: 291px;
   min-height: 393px;
   font-size: 50px;
@@ -145,10 +146,20 @@ footer {
   font-size: 16px;
   background-color: #222222;
   color: #ffffff;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+}
+
+.social i {
+  width: 41px;
+  height: 40px;
+}
+
+.fab {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 16px;
+  background-color: #222222;
+  color: #ffffff;
 }
 
 .btn {
@@ -157,14 +168,10 @@ footer {
   width: 240px;
   height: 65px;
   font-size: 18px;
-  font-weight: 700px;
+  font-weight: 700;
   border-radius: 5px;
   letter-spacing: -1.88px;
   display: inline-block;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
 }
 
 footer,
