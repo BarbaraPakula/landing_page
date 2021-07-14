@@ -1,1 +1,1 @@
-https://barbarapakula.github.io/Dobryjason2/
+https://barbarapakula.github.io/landing_page/
